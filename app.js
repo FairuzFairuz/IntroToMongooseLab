@@ -55,7 +55,7 @@ const main = async () => {
 
 const createCustomer = async () => {
   const name = prompt("Enter customer name: ");
-  const age = prompt("Enter customer age: ");
+  const age = Number(prompt("Enter customer age: "));
 
   const newCustomer = new Customer({ name, age });
   await newCustomer.save();
