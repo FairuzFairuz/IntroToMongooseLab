@@ -1,5 +1,4 @@
 import mongoose from "mongoose";
-import express from "express";
 import dotenv from "dotenv";
 dotenv.config();
 import connectDB from "./src/db/db.js";
@@ -44,7 +43,7 @@ const main = async () => {
         break;
       case "5":
         console.log("Exiting...");
-        mongoose.connection.close(); // Ensures clean exit
+        mongoose.connection.close(); // Proper exit
         running = false;
         break;
       default:
